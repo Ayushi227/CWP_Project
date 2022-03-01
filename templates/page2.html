@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{% static '../static/css/page2style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+
+
+    <section class="imagepart">
+      <img
+        src="{% static '../static/images/11_116939_plain_wallpaper_violet_plain_colour_background_hd.jpg' %}"
+        alt="Error in loading the image"
+      />
+
+      <form action="/postquiz/" method="post" class="form">
+           {% csrf_token %}
+        <div id="qbox" style="font-size: 30px">{{word}}</div>
+        <div>
+            <input class="choice-container1" style="font-size: 20px" name="choice1" id="choice1" value="{{choice1}}" type="submit" >
+          <label for=""choice1>{{choice1}}</label>
+        </div>
+        <div>
+            <input class="choice-container2" style="font-size: 20px" id="choice2" name="choice2" value="{{choice2}}" type="submit" >
+            <label for=""choice2>{{choice2}}</label>
+        </div>
+          <div>
+            <input class="choice-container3" style="font-size: 20px" id="choice3"name="choice3" value="{{choice3}}" type="submit" >
+          <label for=""choice3>{{choice3}}</label>
+        </div>
+          <div>
+            <input class="choice-container4" style="font-size: 20px" id="choice4" name="choice4" value="{{choice4}}" type="submit" >
+          <label for=""choice4>{{choice4}}</label>
+        </div>
+        <div id="score">
+          <div class="score-container">
+            <p class="scdisplay">SCORE</p>
+          </div>
+          <div class="score-container2">
+            <p class="scnumber">{{ score }}</p>
+
+            <br><br>&nbsp;
+</div>
+            <div>
+            <input class="choice-container5" style="font-size: 20px" id="final" name="final" value="End quiz" type="submit" >
+    </div>
+
+
+        </div>
+        </div>
+
+      </form>
+    </section>
+    </div>
+
+  </body>
+</html>

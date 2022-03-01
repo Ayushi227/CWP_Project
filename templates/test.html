@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        There are currently {{num_posts}} posts.<hr>
+        {% for post in posts %}
+            <h2>{{post.word}}</h2>
+        {% endfor %}
+        <hr>
+        <form method="POST">
+            <table>
+              {{word}}
+            </table>                
+           {% csrf_token %}
+           <button type="submit">Create</button>
+        </form>
+    </body>
+</html>

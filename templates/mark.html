@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{% static '../static/css/page2style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+
+
+    <section class="imagepart">
+      <img
+        src="{% static '../static/images/11_116939_plain_wallpaper_violet_plain_colour_background_hd.jpg' %}"
+        alt="Error in loading the image"
+      />
+
+      <form action="/postquiz/" method="post" class="form">
+           {% csrf_token %}
+
+        <div>
+            <input class="choice-container2" style="font-size: 20px" id="choice2" name="choice2" value="Final score={{score}}" type="submit" >
+            <label for=""choice2>Final score={{ score}}</label>
+        </div>
+          <div>
+            <input class="choice-container3" style="font-size: 20px" id="choice3"name="choice3" value="last score={{ last }}" type="submit" >
+          <label for=""choice3>last score={{ last }}</label>
+        </div>
+          <div>
+            <input class="choice-container4" style="font-size: 20px" id="choice4" name="choice4" value="Highest score={{ high }}" type="submit" >
+          <label for=""choice4>Highest score={{ high }}</label>
+        </div>
+
+
+      </form>
+    </section>
+    </div>
+
+  </body>
+</html>

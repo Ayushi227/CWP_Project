@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Square&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: "Nova Square", cursive;
+}
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #042331;
+  transition: all 0.5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #063146;
+  user-select: none;
+}
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s;
+}
+ul li:hover a {
+  padding-left: 50px;
+}
+.sidebar ul a i {
+  margin-right: 16px;
+}
+#check {
+  display: none;
+}
+label #btn,
+label #cancel {
+  position: absolute;
+  background: #042331;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn {
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all 0.5s;
+}
+label #cancel {
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all 0.5s ease;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+#check:checked ~ label #btn {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel {
+  left: 195px;
+}
+#check:checked ~ section {
+  margin-left: 250px;
+}
+section {
+  background: url("..assets/admin/img/11_116939_plain_wallpaper_violet_plain_colour_background_hd.jpg")
+    no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: all 0.5s;
+}
+
+#qbox {
+  position: absolute;
+  width: 500px;
+  height: 150px;
+  z-index: 15;
+  top: 30%;
+  left: 40%;
+  margin: -100px 0 0 -150px;
+  background: #033044;
+  padding: 0.4rem 1.4rem;
+  border-radius: 30px;
+  font-size: 24px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.choice-container1 {
+  position: absolute;
+  display: flex;
+  width: 450px;
+  height: 45px;
+  top: 65%;
+  left: 45%;
+  margin: -100px 0 0 -150px;
+  border-radius: 4px;
+  background: #0a5275;
+  font-size: 2rem;
+  color: aliceblue;
+}
+
+.choice-container2 {
+  position: absolute;
+  display: flex;
+  width: 450px;
+  height: 45px;
+  top: 75%;
+  left: 45%;
+  margin: -100px 0 0 -150px;
+  border-radius: 4px;
+  background: #0a5275;
+  font-size: 2rem;
+  color: aliceblue;
+}
+
+.choice-container3 {
+  position: absolute;
+  display: flex;
+  width: 450px;
+  height: 45px;
+  top: 85%;
+  left: 45%;
+  margin: -100px 0 0 -150px;
+  border-radius: 4px;
+  background: #0a5275;
+  font-size: 2rem;
+  color: aliceblue;
+}
+
+.choice-container4 {
+  position: absolute;
+  display: flex;
+  width: 450px;
+  height: 45px;
+  top: 95%;
+  left: 45%;
+  margin: -100px 0 0 -150px;
+  border-radius: 4px;
+  background: #0a5275;
+  font-size: 2rem;
+  color: aliceblue;
+}
+
+.choice-container1:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 #033044;
+  transform: scale(1.01);
+  transform: transform 1000ms;
+}
+
+.choice-container2:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 #033044;
+  transform: scale(1.01);
+  transform: transform 1000ms;
+}
+
+.choice-container3:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 #033044;
+  transform: scale(1.01);
+  transform: transform 1000ms;
+}
+
+.choice-container4:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 #033044;
+  transform: scale(1.01);
+  transform: transform 1000ms;
+}
+
+.choice-prefix {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: white;
+}
+
+#score {
+  position: absolute;
+  top: 40%;
+  left: 75%;
+}
+
+.scdisplay {
+  font-size: 2.5rem;
+}
+
+.scnumber {
+  font-size: 2.5rem;
+  left: 20%;
+}
